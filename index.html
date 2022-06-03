@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Nanum+Pen+Script&family=Open+Sans:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/style.css">
 
@@ -22,21 +25,44 @@
       <img class="mockup" src="/images/illustration-mockups.svg" alt="projetos">
       <div class="text">
         <h1>Build The Community Your Fans Will Love</h1>
-        <p>Ainda assim, existem dúvidas a respeito de como a estrutura atual da organização auxilia a preparação e a composição das regras de conduta normativas.</p>
+        <p>Ainda assim, existem dúvidas a respeito de como a estrutura atual da organização auxilia a preparação e a
+          composição das regras de conduta normativas.</p>
         <div class="button">
-          <a href="#" class="btnSolid">registre agora</a>
+          <a href="#dados" onclick="displayDiv('formulario')" class="btnSolid">registre agora</a>
         </div>
       </div>
     </section>
+
+
+    <div class="social_links">
+      <ul class="social">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+      </ul>
+    </div>
   </div>
 
-  <footer>
-    <ul class="social">
-      <a href="#"><i class="bi bi-facebook"></i></a>
-      <a href="#"><i class="bi bi-instagram"></i></a>
-      <a href="#"><i class="bi bi-twitter"></i></a>
-    </ul>
-  </footer>
+  <div class="formulario">
+    <p>Preencha os dados abaixo para fazer parte do nosso team DEV!</p>
+    
+    <form action=""> 
+      <div id="dados" class="form_data">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome">
+        
+        <label for="email">E-mail: </label>
+        <input type="email" name="email" id="email">
+
+        <label for="pass">Senha: </label>
+        <input type="password" name="pass" id="pass">
+      </div>
+      <div class="button">
+        <a href="" class="btnSolid send">enviar</a>
+      </div>
+    </form>
+  </div>
+  
 
 </body>
 </html>

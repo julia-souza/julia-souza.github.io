@@ -2,12 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 
-body {
+body{
+    background: hsl(257, 40%, 49%);
+}
+.container {
     background: hsl(257, 40%, 49%);
     background-image: url(/images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: auto;
     margin: auto;
     height: 100vh;
@@ -15,9 +22,7 @@ body {
 }
 
 header{
-    position: relative;
-    top: 40px;
-    left: 40px;
+    padding: 40px 0 20px 40px;
     z-index: 1;
 }
 
@@ -26,12 +31,13 @@ section {
 }
 
 .conteudo {
-    margin: 70px 50px;
+    padding: 0 40px;
+    height: 70vh;
 }
 
 .mockup {
     margin: auto;
-    width: 80%;
+    width: 60%;
 }
 
 .text {
@@ -48,8 +54,15 @@ section {
     margin-bottom: 20px;
 }
 
+p{
+    font-size: 1.05rem;
+    color: white;
+    text-align: center;
+}
+
 .btnSolid{
     display: block;
+    border: none;
     text-decoration: none;
     align-items: center;
     text-align: center;
@@ -61,7 +74,7 @@ section {
     border-radius: 20px;
 }
 
-footer{
+.social_links{
     position: relative;
     left: -100px;
     bottom: 20px;
@@ -69,24 +82,48 @@ footer{
 .social{
     font-size: 1.5rem;
     text-align: right;
-   
+    z-index: 10;
 }
 .social li{
     padding: 20px;
-    color: white;
 }
+
 .btnSolid:hover{
     background-color: hsl(300, 69%, 71%);
     color: hsl(257, 37%, 11%);
     transition: 1s;
 }
 
-@media screen and (max-width: 375px) {
+.form_data{
+    margin-bottom: 30px;
+}
+.formulario{
+    margin: auto;
+    width: 50%;
+    padding: 40px;
+}
+.formulario input{
+    display: block;
+    width: 100%;
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+}
+.formulario label{
+    padding: 6px;
+    font-size: 1.2rem;
+    color: white;
+}
+.send{
+    margin: auto;
+}
+
+@media screen and (max-width: 417px){
     header img {
         width: 30%;
     }
 
-    body {
+    .container{
         background-image: url(/images/bg-mobile.svg);
         background-size: contain;
         background-repeat: no-repeat;
@@ -98,8 +135,8 @@ footer{
     }
 
     .conteudo {
-
         display: block;
+        height: 100%;
     }
 
     .text{
@@ -112,7 +149,7 @@ footer{
     .text h1 {
         font-size: 22px;
     }
-    .text p{
+    p{
         margin-top: 10px;
         font-size: 15px;
     }
@@ -121,14 +158,24 @@ footer{
         margin: auto;
         width: 200px;
     }
-    footer{
+    .social_links{
         position: relative;
         left: -150px;
-        bottom: 20px;
+        bottom: 0px;
     }
     .social li{
         text-align: center;
         font-size: 1rem;
         margin-top: auto;
+    }
+    .formulario{
+        margin: auto;
+        width: 100%;
+        padding: 40px;
+    }
+    .formulario label{
+        padding: 6px;
+        font-size: 1.05rem;
+        color: white;
     }
 }
